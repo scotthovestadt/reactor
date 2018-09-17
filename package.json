@@ -1,5 +1,5 @@
 {
-  "name": "@sencha/ext-react",
+  "name": "@extjs/reactor",
   "version": "6.6.1",
   "description": "Use Ext JS components in React 16 and above",
   "main": "dist/index.js",

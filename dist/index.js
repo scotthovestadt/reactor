@@ -1,7 +1,7 @@
 import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import { reactify } from './reactify'; //export function ExtReact() {} //??
-//import { reactify } from '@sencha/ext-react'
+//import { reactify } from '@extjs/ext-react'
 //var ExtReact = reactify('ExtReact')
 
 var globalRoot = [];
@@ -179,9 +179,9 @@ export function launch(rootComponent, options, appConfig) {
 
 export function install(options) {
   if (options.viewport) {
-    console.warn('[@sencha/ext-react] Warning: install({ viewport: true }) is deprecated.  Use launch(<App/>) in place of Ext.onReady(() => ReactDOM.render(<App/>, document.getElementById(\'root\'))).');
+    console.warn('[@extjs/ext-react] Warning: install({ viewport: true }) is deprecated.  Use launch(<App/>) in place of Ext.onReady(() => ReactDOM.render(<App/>, document.getElementById(\'root\'))).');
   } else {
-    console.warn('[@sencha/ext-react] Warning: install() is deprecated.  Use launch(() => ReactDOM.render(<App/>, document.getElementById(\'root\'))) in place of Ext.onReady(() => ReactDOM.render(<App/>, document.getElementById(\'root\'))).');
+    console.warn('[@extjs/ext-react] Warning: install() is deprecated.  Use launch(() => ReactDOM.render(<App/>, document.getElementById(\'root\'))) in place of Ext.onReady(() => ReactDOM.render(<App/>, document.getElementById(\'root\'))).');
   }
 
   launch(null, options);
