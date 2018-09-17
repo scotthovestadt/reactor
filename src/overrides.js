@@ -33,7 +33,8 @@ Ext.dom.Element.prototype.ripple = function(event) {
 const originalWidgetIsXtype = Ext.Widget.prototype.isXType;
 
 Ext.Widget.prototype.isXType = function(xtype, shallow) {
-    return originalWidgetIsXtype.call(this, xtype.toLowerCase().replace(/_/g, '-'), shallow);
+    return originalWidgetIsXtype.call(this, xtype, shallow)
+        || originalWidgetIsXtype.call(this, xtype.toLowerCase().replace(/_/g, '-'), shallow);
 }
 
 // needed for classic
