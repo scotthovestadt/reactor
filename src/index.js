@@ -3,7 +3,7 @@ import { reactify } from './reactify'
 
 //export function ExtReact() {} //??
 //import { reactify } from '@extjs/ext-react'
-//var ExtReact = reactify('ExtReact')
+var ExtReact = reactify('ExtReact')
 
 var globalRoot = []
 export { globalRoot }
@@ -96,7 +96,7 @@ export function go({callback, element}) {
         }
 
         if (rootComponent) {
-          ReactDOM.render(rootComponent, target);
+          ReactDOM.render(<ExtReact>${rootComponent}</ExtReact>, target);
         }
       }
     }
@@ -133,7 +133,7 @@ export function launch(rootComponent, options = { debug: false, viewport: false 
           rootComponent = rootComponent(target);
         }
         if (rootComponent) {
-          ReactDOM.render(rootComponent, target);
+          ReactDOM.render(<ExtReact>${rootComponent}</ExtReact>, target);
         }
       } else {
         if (options.viewport || rootComponent) {
@@ -152,7 +152,7 @@ export function launch(rootComponent, options = { debug: false, viewport: false 
         }
 
         if (rootComponent) {
-          ReactDOM.render(rootComponent, target);
+          ReactDOM.render(<ExtReact>${rootComponent}</ExtReact>, target);
         }
       }
     }

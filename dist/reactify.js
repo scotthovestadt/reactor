@@ -113,7 +113,7 @@ export function reactify(target) {
       }
     }
 
-    return target.xtype;
+    return reactify2(target.xtype);
   } else if (target === 'ExtReact') {
     l('target is: ExtReact, return reactifiedClass');
     var xtype = 'container';

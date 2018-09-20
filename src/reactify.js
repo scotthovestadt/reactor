@@ -66,7 +66,7 @@ export function reactify(target) {
       console.warn(`ExtReact: Custom Ext JS component defined with no xtype`,target.$config)
       }
     }
-    return target.xtype
+    return reactify2(target.xtype);
   }
   else if (target === 'ExtReact') {
     l('target is: ExtReact, return reactifiedClass')

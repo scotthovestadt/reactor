@@ -3,15 +3,16 @@ import { ReactElement, Component, ComponentClass, StatelessComponent } from 'rea
 export function ExtReact<P>()
 
 export interface LaunchOptions {
-    debug: boolean
+    debug: boolean;
+    viewport: boolean;
 }
 
 /**
  * Launches the app and renders the specified root component into the html body
  * @param rootComponent The root component to render
  */
-export function launch<P>(rootComponent: ReactElement<P>, options?: Partial<LaunchOptions>): void;
-export function launch<P>(callback: (viewport: HTMLElement) => void | ReactElement<P>, options?: Partial<LaunchOptions>): void;
+export function launch<P>(rootComponent: ReactElement<P>, options?: Partial<LaunchOptions>, appConfig?: any): void;
+export function launch<P>(callback: (viewport: HTMLElement) => void | ReactElement<P>, options?: Partial<LaunchOptions>, appConfig?: any): void;
 
 /**
  * A HOC that returns a component that delays inital rendering until ExtReact is ready.

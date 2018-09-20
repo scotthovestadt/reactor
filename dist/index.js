@@ -2,8 +2,8 @@ import _extends from "@babel/runtime/helpers/extends";
 import React from 'react';
 import { reactify } from './reactify'; //export function ExtReact() {} //??
 //import { reactify } from '@extjs/ext-react'
-//var ExtReact = reactify('ExtReact')
 
+var ExtReact = reactify('ExtReact');
 var globalRoot = [];
 export { globalRoot };
 export function render(component, target) {
@@ -98,7 +98,7 @@ export function go(_ref) {
         }
 
         if (rootComponent) {
-          ReactDOM.render(rootComponent, _target);
+          ReactDOM.render(React.createElement(ExtReact, null, "$", rootComponent), _target);
         }
       }
     }
@@ -140,7 +140,7 @@ export function launch(rootComponent, options, appConfig) {
         }
 
         if (rootComponent) {
-          ReactDOM.render(rootComponent, target);
+          ReactDOM.render(React.createElement(ExtReact, null, "$", rootComponent), target);
         }
       } else {
         if (options.viewport || rootComponent) {
@@ -162,7 +162,7 @@ export function launch(rootComponent, options, appConfig) {
         }
 
         if (rootComponent) {
-          ReactDOM.render(rootComponent, _target2);
+          ReactDOM.render(React.createElement(ExtReact, null, "$", rootComponent), _target2);
         }
       }
     }
