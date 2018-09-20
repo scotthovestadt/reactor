@@ -39,6 +39,7 @@ export function install(options?: Partial<InstallOptions>): void;
  * For example: const Grid = reactify('grid');
  * @param target xtype or instance of Ext.Class.
  */
+export function reactify<Props>(target: string | (new (...args: any[]) => any)): new () => Component<Props>;
 export function reactify<Props, State>(target: string | (new (...args: any[]) => any)): new () => Component<Props, State>;
 export function reactify<Props1, State1, Props2, State2>(target1: string | (new (...args: any[]) => any), target2: string | (new (...args: any[]) => any)): [new () => Component<Props1, State1>, new () => Component<Props2, State2>];
 export function reactify<Props1, State1, Props2, State2, Props3, State3>(target1: string | (new (...args: any[]) => any), target2: string | (new (...args: any[]) => any), target3: string | (new (...args: any[]) => any)): [new () => Component<Props1, State1>, new () => Component<Props2, State2>, new () => Component<Props3, State3>];
