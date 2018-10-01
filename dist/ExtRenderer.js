@@ -202,7 +202,7 @@ var ExtRenderer = Reconciler({
       });
 
       if (Ext.isClassic) {
-        console.log(type);
+        // console.log(type)
         ExtJSComponent.createElement = React.createElement(type, props, props.children);
       } else {
         ReactDOM.render(React.createElement(type, props, props.children), cmp.el.dom);
@@ -289,8 +289,8 @@ var ExtRenderer = Reconciler({
 
     if (Ext.isClassic) {
       if (childInstance.createElement) {
-        console.log(childInstance);
-        console.log(childInstance.createElement);
+        // console.log(childInstance)
+        // console.log(childInstance.createElement)
         ReactDOM.render(childInstance.createElement, childInstance.cmp.getEl().dom);
       }
     }

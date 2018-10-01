@@ -189,7 +189,7 @@ const ExtRenderer = Reconciler({
       //SK : HTML Rendering - STEP 2  : Create component and render HTML in its DOM
       var cmp = Ext.create({xtype:'component', cls: 'x-react-element'})
       if (Ext.isClassic) {
-        console.log(type)
+        // console.log(type)
         ExtJSComponent.createElement =  React.createElement(type, props, props.children)
       }
       else {
@@ -291,8 +291,8 @@ const ExtRenderer = Reconciler({
 //mjg
     if (Ext.isClassic) {
       if(childInstance.createElement) {
-        console.log(childInstance)
-        console.log(childInstance.createElement)
+        // console.log(childInstance)
+        // console.log(childInstance.createElement)
         ReactDOM.render(childInstance.createElement,childInstance.cmp.getEl().dom)
       }
     }
