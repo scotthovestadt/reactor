@@ -358,7 +358,7 @@ var ExtRenderer = Reconciler({
           if (child.cmp.xtype === "menu") {
             parentInstance.cmp.setMenu(null);
           }
-        } else if (parentInstance.cmp.getItems != undefined && typeof parentInstance.cmp.getItems == 'function' && parentInstance.cmp.getItems().get(child.cmp.getItemId())) {
+        } else if (parentInstance.cmp.items && typeof parentInstance.cmp.items.get == 'function' && parentInstance.cmp.items.get(child.cmp.getItemId())) {
           parentInstance.cmp.remove(child.cmp, true);
         } else {
           l("DID NOTHING IN REMOVE");
